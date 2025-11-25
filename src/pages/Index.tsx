@@ -86,14 +86,14 @@ const Index = () => {
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <a href="mailto:hello@example.com" className="hover:text-primary transition-colors">
-                    hello@example.com
+                  <a href="mailto:mosesdeus757@gmail.com" className="hover:text-primary transition-colors">
+                    mosesdeus757@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:+255755974083" className="hover:text-primary transition-colors">
+                    +255755974083
                   </a>
                 </div>
               </div>
@@ -113,14 +113,14 @@ const Index = () => {
                   Instagram
                 </a>
                 <span className="text-muted-foreground">•</span>
-                <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://facebook.com/moz visuals" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   Facebook
                 </a>
               </div>
             </div>
           </div>
           <div className="border-t pt-6 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} MOZ VISUALS. All rights reserved.</p>
           </div>
         </div>
       </footer>
