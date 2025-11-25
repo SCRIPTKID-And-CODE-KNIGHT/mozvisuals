@@ -101,11 +101,11 @@ const Index = () => {
             <div>
               <h3 className="font-bold text-lg mb-4">Quick Links</h3>
               <div className="flex flex-wrap gap-3">
-                <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://tiktok.com/@moz_visuals_" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   TikTok
                 </a>
                 <span className="text-muted-foreground">•</span>
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://wa.me/255755974083" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   WhatsApp
                 </a>
                 <span className="text-muted-foreground">•</span>
