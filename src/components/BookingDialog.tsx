@@ -53,17 +53,12 @@ export const BookingDialog = ({ open, onOpenChange, serviceName }: BookingDialog
     const whatsappMessage = `*New Booking Request*\n\n*Service:* ${serviceName}\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Message:* ${formData.message}`;
     const whatsappURL = `https://wa.me/972755974083?text=${encodeURIComponent(whatsappMessage)}`;
     
-    // Open WhatsApp in new tab
-    window.open(whatsappURL, '_blank');
-    
-    toast({
-      title: "Opening WhatsApp",
-      description: "Your booking request is ready to send!",
-    });
-
-    // Reset form and close dialog
+    // Reset form and close dialog first
     setFormData({ name: "", email: "", message: "" });
     onOpenChange(false);
+    
+    // Navigate to WhatsApp directly
+    window.location.href = whatsappURL;
   };
 
   return (
