@@ -1,5 +1,6 @@
 import { SocialLinks } from "@/components/SocialLinks";
 import { ServiceCard } from "@/components/ServiceCard";
+import { PortfolioGallery } from "@/components/PortfolioGallery";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 
@@ -67,6 +68,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Portfolio Gallery */}
+      <PortfolioGallery />
 
       {/* Services Section */}
       <div id="services">
