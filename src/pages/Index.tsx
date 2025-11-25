@@ -109,7 +109,7 @@ const Index = () => {
                   WhatsApp
                 </a>
                 <span className="text-muted-foreground">•</span>
-                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://instagram.com/moz_visuals_" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   Instagram
                 </a>
                 <span className="text-muted-foreground">•</span>
