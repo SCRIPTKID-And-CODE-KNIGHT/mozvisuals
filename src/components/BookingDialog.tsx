@@ -51,8 +51,8 @@ export const BookingDialog = ({ open, onOpenChange, serviceName }: BookingDialog
 
     // Format WhatsApp message
     const whatsappMessage = `*New Booking Request*\n\n*Service:* ${serviceName}\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Message:* ${formData.message}`;
-    // WhatsApp API expects international format without leading zeros
-    const whatsappURL = `https://api.whatsapp.com/send?phone=755974083&text=${encodeURIComponent(whatsappMessage)}`;
+    // WhatsApp API with Tanzania country code (+255)
+    const whatsappURL = `https://api.whatsapp.com/send?phone=255755974083&text=${encodeURIComponent(whatsappMessage)}`;
     
     // Reset form and close dialog first
     setFormData({ name: "", email: "", message: "" });
