@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookingDialog } from "./BookingDialog";
-import { Palette, TrendingUp } from "lucide-react";
+import { Megaphone, Sparkles, FileText, Monitor } from "lucide-react";
 
 interface Service {
   id: string;
@@ -14,18 +14,32 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: "graphic-design",
-    title: "Graphic Designing",
-    description: "Creative visual solutions for your brand",
-    icon: Palette,
-    details: "Professional graphic design services including logos, branding materials, social media graphics, posters, and more. Let's bring your vision to life with stunning visuals.",
+    id: "advertising-marketing",
+    title: "Advertising & Marketing Design",
+    description: "Compelling designs that drive results",
+    icon: Megaphone,
+    details: "Strategic advertising and marketing design solutions including campaign materials, promotional graphics, and eye-catching advertisements that capture attention and convert.",
   },
   {
-    id: "digital-marketing",
-    title: "Digital Marketing",
-    description: "Grow your online presence effectively",
-    icon: TrendingUp,
-    details: "Comprehensive digital marketing strategies including social media management, content creation, SEO optimization, and campaign management to boost your brand's online presence.",
+    id: "branding-identity",
+    title: "Branding & Identity Design",
+    description: "Build a memorable brand identity",
+    icon: Sparkles,
+    details: "Complete branding and identity design services including logos, brand guidelines, color palettes, typography, and cohesive visual identity systems that make your brand unforgettable.",
+  },
+  {
+    id: "print-publication",
+    title: "Print & Publication Design",
+    description: "Professional print materials that impress",
+    icon: FileText,
+    details: "High-quality print and publication design including brochures, magazines, catalogs, business cards, flyers, and other printed materials with attention to detail and print specifications.",
+  },
+  {
+    id: "digital-web",
+    title: "Digital & Web Graphics",
+    description: "Modern digital designs for online presence",
+    icon: Monitor,
+    details: "Contemporary digital and web graphics including website visuals, social media content, digital banners, email templates, and all your online design needs optimized for digital platforms.",
   },
 ];
 

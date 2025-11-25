@@ -49,12 +49,16 @@ export const BookingDialog = ({ open, onOpenChange, serviceName }: BookingDialog
       return;
     }
 
-    // Here you would typically send the data to your backend
-    console.log("Booking submitted:", { ...formData, service: serviceName });
+    // Format WhatsApp message
+    const whatsappMessage = `*New Booking Request*\n\n*Service:* ${serviceName}\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Message:* ${formData.message}`;
+    const whatsappURL = `https://wa.me/972755974083?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
     
     toast({
-      title: "Booking Request Sent!",
-      description: "I'll get back to you as soon as possible.",
+      title: "Opening WhatsApp",
+      description: "Your booking request is ready to send!",
     });
 
     // Reset form and close dialog
