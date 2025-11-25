@@ -18,7 +18,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/yourusername",
+    url: "https://instagram.com/moz_visuals_",
     icon: Instagram,
   },
   {
