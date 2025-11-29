@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookingDialog } from "./BookingDialog";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Megaphone, Sparkles, FileText, Monitor } from "lucide-react";
 
 interface Service {
@@ -57,24 +58,26 @@ export const ServiceCard = () => {
     <>
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3">Book a Service</h2>
-            <p className="text-muted-foreground">Choose the service you need</p>
-          </div>
+          <ScrollReveal animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-3">Book a Service</h2>
+              <p className="text-muted-foreground">Choose the service you need</p>
+            </div>
+          </ScrollReveal>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {services.map((service) => {
+            {services.map((service, index) => {
               const Icon = service.icon;
               const isSelected = selectedService === service.id;
               
               return (
-                <Card
-                  key={service.id}
-                  className={`cursor-pointer transition-all hover:shadow-soft ${
-                    isSelected ? "ring-2 ring-primary shadow-soft" : ""
-                  }`}
-                  onClick={() => setSelectedService(isSelected ? null : service.id)}
-                >
+                <ScrollReveal key={service.id} animation="fade-up" delay={index * 100}>
+                  <Card
+                    className={`cursor-pointer transition-all hover:shadow-soft h-full ${
+                      isSelected ? "ring-2 ring-primary shadow-soft" : ""
+                    }`}
+                    onClick={() => setSelectedService(isSelected ? null : service.id)}
+                  >
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="p-2 rounded-lg bg-primary/10">
@@ -101,7 +104,8 @@ export const ServiceCard = () => {
                       </Button>
                     </CardContent>
                   )}
-                </Card>
+                  </Card>
+                </ScrollReveal>
               );
             })}
           </div>

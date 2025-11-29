@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import {
   Dialog,
   DialogContent,
@@ -107,13 +108,16 @@ export const PortfolioGallery = () => {
     <>
       <section id="portfolio" className="py-16 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3">Portfolio</h2>
-            <p className="text-muted-foreground">Explore my creative work across different categories</p>
-          </div>
+          <ScrollReveal animation="fade-up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-3">Portfolio</h2>
+              <p className="text-muted-foreground">Explore my creative work across different categories</p>
+            </div>
+          </ScrollReveal>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <ScrollReveal animation="fade-up" delay={100}>
+            <div className="flex flex-wrap justify-center gap-2 mb-10">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -124,33 +128,35 @@ export const PortfolioGallery = () => {
                 {category}
               </Button>
             ))}
-          </div>
+            </div>
+          </ScrollReveal>
 
           {/* Portfolio Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredItems.map((item) => (
-              <Card
-                key={item.id}
-                className="group cursor-pointer overflow-hidden hover:shadow-soft transition-all hover-scale"
-                onClick={() => setSelectedItem(item)}
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <Badge variant="secondary" className="mb-2 text-xs">
-                    {item.category}
-                  </Badge>
-                  <h3 className="font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+            {filteredItems.map((item, index) => (
+              <ScrollReveal key={item.id} animation="fade-up" delay={index * 100}>
+                <Card
+                  className="group cursor-pointer overflow-hidden hover:shadow-soft transition-all hover-scale"
+                  onClick={() => setSelectedItem(item)}
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <CardContent className="p-4">
+                    <Badge variant="secondary" className="mb-2 text-xs">
+                      {item.category}
+                    </Badge>
+                    <h3 className="font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
 
