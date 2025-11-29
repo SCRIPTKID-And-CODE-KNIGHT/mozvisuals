@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import { SocialLinks } from "@/components/SocialLinks";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
@@ -7,6 +8,7 @@ import { Mail, Phone } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]" />
@@ -35,7 +37,7 @@ const Index = () => {
       <SocialLinks />
 
       {/* About Section */}
-      <section className="py-16 px-4 bg-card">
+      <section id="about" className="py-16 px-4 bg-card">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center animate-fade-in">
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
@@ -78,7 +80,7 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-card border-t py-12 px-4">
+      <footer id="contact" className="bg-card border-t py-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
