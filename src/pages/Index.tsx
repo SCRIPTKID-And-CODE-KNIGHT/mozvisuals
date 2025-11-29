@@ -5,6 +5,7 @@ import { PortfolioGallery } from "@/components/PortfolioGallery";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
+import profileImage from "@/assets/profile.jpeg";
 
 const Index = () => {
   return (
@@ -15,6 +16,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]" />
         <div className="container mx-auto px-4 py-24 md:py-32 relative">
           <div className="max-w-3xl mx-auto text-center">
+            <ScrollReveal animation="zoom">
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-foreground/30 shadow-lg">
+                <img 
+                  src={profileImage} 
+                  alt="MOZ Visuals" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </ScrollReveal>
             <ScrollReveal animation="fade-up">
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
                 Your Creative Partner
