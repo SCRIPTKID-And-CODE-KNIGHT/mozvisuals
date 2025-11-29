@@ -17,12 +17,16 @@ const Index = () => {
         <div className="container mx-auto px-4 py-24 md:py-32 relative">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal animation="zoom">
-              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-foreground/30 shadow-lg">
-                <img 
-                  src={profileImage} 
-                  alt="MOZ Visuals" 
-                  className="w-full h-full object-cover object-top"
-                />
+              <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-6">
+                <div className="absolute inset-0 rounded-full bg-accent/50 blur-xl animate-pulse" />
+                <div className="absolute inset-0 rounded-full bg-primary-foreground/20 blur-md" />
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary-foreground/40 shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                  <img 
+                    src={profileImage} 
+                    alt="MOZ Visuals" 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-up">
