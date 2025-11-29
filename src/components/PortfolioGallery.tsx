@@ -105,7 +105,7 @@ export const PortfolioGallery = () => {
 
   return (
     <>
-      <section className="py-16 px-4 bg-background">
+      <section id="portfolio" className="py-16 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-3">Portfolio</h2>
