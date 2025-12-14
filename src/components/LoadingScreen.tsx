@@ -35,7 +35,7 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
         </div>
       </div>
       <h1 className="text-3xl md:text-5xl font-bold text-foreground animate-fade-in">
-        MPZ VISUALS
+        MOZ VISUALS
       </h1>
       <div className="mt-8 w-48 h-1 bg-muted rounded-full overflow-hidden">
         <div className="h-full bg-primary animate-[loading_2s_ease-in-out]" />
